@@ -7,13 +7,15 @@
 ​
     var App = window.App;
     var Truck = App.Truck;
-    var DataStore = App.DataStore;
-    var RemoteDataStore = App.RemoteDataStore;
+    //var DataStore = App.DataStore;
+    //var RemoteDataStore = App.RemoteDataStore;
+    var FireBaseDataStore = App.FireBaseDataStore;
     var FormHandler = App.FormHandler;
     var Validation = App.Validation;
     var CheckList = App.CheckList;
 ​
-    var remoteDS = new RemoteDataStore(SERVER_URL);
+    //var remoteDS = new RemoteDataStore(SERVER_URL);
+    var remoteFireBase = new FireBaseDataStore();
     // var truck = new Truck('ncc-1701', new DataStore());
     var truck = new Truck('ncc-1701', remoteDS);
     window.truck = truck;
